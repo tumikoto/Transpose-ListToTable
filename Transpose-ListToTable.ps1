@@ -5,11 +5,11 @@ param (
 )
 
 If (!( Test-Path $InputFile) -and ($OutputFile)) {
-	Write-Host Usage:
-	Write-Host  powershell.exe Transpose-ListToTable.ps1 -InputFile `<format-list input file`> -OutputFile `<CSV output file`> -ObjectDelimiter `<string indicating obj boundary in input file`>
+	Write-Host "Usage:"
+	Write-Host 'powershell.exe Transpose-ListToTable.ps1 -InputFile <input_text> -OutputFile <file_path> -ObjectDelimiter <delim_string>'
 	Write-Host " "
-	Write-Host Example:
-	Write-Host  powershell.exe Transpose-ListToTable.ps1 -InputFile .\format-list-output.txt -OutputFile .\format-table-output.csv -ObjectDelimiter "----------------------------"
+	Write-Host "Example:"
+	Write-Host '`tpowershell.exe Transpose-ListToTable.ps1 -InputFile .\format-list-output.txt -OutputFile .\format-table-output.csv -ObjectDelimiter "-------------"'
 	Exit
 }
 
